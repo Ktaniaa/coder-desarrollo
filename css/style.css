@@ -11,28 +11,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
-    min-height: 100vh;
     background-color: #F2ECCE;
 }
 
 /*BARRA SUPERIOR*/
-.menuNavegacion{
+
+
+.navegacionFlexbox{
     background-color:#F27B35;
     text-align: center;
 }
-.menuNavegacion li{
+/*UTILIZO GRID PARA HACER EL CONTENIDO DE LA BARRA DE NAVEGACION RESPONSIVE*/
+.navegacionFlexbox ul{
+    display:grid;
+    grid-template-columns: 20% 16% 16% 16% 16% 16%  ;
+}
+.navegacionFlexbox ul li{
     display: inline;
     vertical-align: middle;
-    padding: 5rem;
+    margin: auto;
+    padding: 2rem;
 }
-.menuNavegacion li a{
+.navegacionFlexbox ul li a{
     text-decoration: none;
     font-family: "Rooto", sans-serif;
     font-weight: 700;
     font-style: normal;
     color: #262626;
-   
 }
+
+
 footer{
     width: 100%;
     position: fixed;
@@ -40,6 +48,25 @@ footer{
 }
 footer nav ul{
     padding-top: 1rem;
+}
+.menuNavegacionFooter{
+    background-color:#F27B35;
+    text-align: center;
+}
+
+.menuNavegacionFooter li{
+    display: inline;
+    vertical-align: middle;
+    padding: 5rem;
+}
+
+.menuNavegacionFooter li a{
+    text-decoration: none;
+    font-family: "Rooto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #262626;
+   
 }
 
 /*H1 GRAL*/
