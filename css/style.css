@@ -16,11 +16,11 @@ body{
 
 /*BARRA SUPERIOR*/
 
-
 .navegacionFlexbox{
     background-color:#F27B35;
     text-align: center;
 }
+
 /*UTILIZO GRID PARA HACER EL CONTENIDO DE LA BARRA DE NAVEGACION RESPONSIVE*/
 .navegacionFlexbox ul{
     display:grid;
@@ -40,12 +40,14 @@ body{
     color: #262626;
 }
 
+/*PIE DE PAGINA*/
 
 footer{
     width: 100%;
     position: fixed;
     bottom: 0;
 }
+
 footer nav ul{
     padding-top: 1rem;
 }
@@ -53,13 +55,11 @@ footer nav ul{
     background-color:#F27B35;
     text-align: center;
 }
-
 .menuNavegacionFooter li{
-    display: inline;
+    display:inline-flex;
     vertical-align: middle;
-    padding: 5rem;
+    padding: 0rem 4rem 0rem 4rem;
 }
-
 .menuNavegacionFooter li a{
     text-decoration: none;
     font-family: "Rooto", sans-serif;
@@ -71,7 +71,9 @@ footer nav ul{
 
 /*H1 GRAL*/
 .hCentrados{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
@@ -84,10 +86,13 @@ h2{
 }
 
 /*INICIO DE LA WEB*/
+.cuerpoInicio{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+}
 .hInicio{
-    padding: 12rem 6rem 12rem 6rem;
-    width: 50%;
-    float: left;
+    padding: 10%;
 }
 .hInicio h1{
     font-family: "Roboto", sans-serif;
@@ -107,27 +112,25 @@ h2{
     font-style: normal;
     padding: 1rem;
 }
-.hImagen{
-    width: 50%;
-    float: right;
-}
-.hImagen img{
-    float: right;
-    margin-right: 10%;
-    padding: 3rem;
-    width: 60%;
-    height: 50%;
+#imgSand{
+    padding: 10%;
+    height: 37rem;
     border: #262626;
 }
-
 /*MENU*/
 .triplesMenu{
     margin-right: 5%;
     margin-left: 5%;
     margin-bottom: 5%;
 }
+.triplesMenu table{
+    overflow-x: auto;
+    margin-bottom: 10%;
+}
 .triplesMenu table tr td{
+    overflow-x: auto;
     margin-left: 5%;
+    margin-bottom: 5%;
     padding: .375rem;
     font-family: "Open Sans";
 }
@@ -152,25 +155,26 @@ h2{
 }
 
 /*UBICACION Y HORARIOS*/
+
+.contenidoMenuUbicacion {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 10%;
+}
 .ubicacionMapa{
-    float: left;
     margin-left: 10%;
-    width: 30%;
 }
 .horariosAtencion{
-    float: right;
     margin-right: 20%;
-    width: 30% ;
 }
 .hUbicacion{
     padding-top: 2rem;
-    margin-left: 10%;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
 .horarioTitulo{
-    margin-left: 50%;
+    padding-top: 2rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -179,7 +183,6 @@ h2{
     font-family: "Open Sans", sans-serif;
     font-style: normal;
 }
-
 
 /*ACERCA DE NOSOTROS*/
 .acercaDeNosotrosSec{
