@@ -90,7 +90,7 @@ footer{
 .hCentrados{
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     padding: 2rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
@@ -101,6 +101,7 @@ h2{
     font-family: "Open Sans", sans-serif;
     font-style: normal;
 }
+
 
 /*INICIO DE LA WEB*/
 .cuerpoInicio{
@@ -134,7 +135,17 @@ h2{
     height: 37rem;
     border: #262626;
 }
+
+
 /*MENU*/
+.triplesComunes{
+    display: grid;
+    grid-template-columns: 100%;
+}
+.triplesEspeciales{
+    display: grid;
+    grid-template-columns: 100%;
+}
 .triplesMenu{
     margin-right: 5%;
     margin-left: 5%;
@@ -145,12 +156,14 @@ h2{
     margin-bottom: 10%;
 }
 .triplesMenu table tr td{
+    background-color: #F2ECCE;
     overflow-x: auto;
     margin-left: 5%;
     margin-bottom: 5%;
     padding: .375rem;
     font-family: "Open Sans";
 }
+
 
 /*RESEÑAS*/
 .usuarioResenia{
@@ -159,20 +172,29 @@ h2{
     padding: .9375rem;
 }
 .reseniasFecha{
+    display: flex;
     font-family: "Roboto";
     font-style: italic;
 }
 .reseniasTexto{
+    display: flex;
     font-family: "Open Sans";
     padding: 1rem;
 }
-.usuarioResenia img{
-    float: left;
-    margin-right: .9375rem;
+.imagenTextoResenia{
+    display: inline-flex;
+}
+.imagenTextoResenia img{
+    margin-right: 1rem;
+}
+.imagenSobreH2{
+    display: none;
 }
 
-/*UBICACION Y HORARIOS*/
 
+
+
+/*UBICACION Y HORARIOS*/
 .contenidoMenuUbicacion {
     display: grid;
     grid-template-columns: 45% 45%;
@@ -196,9 +218,11 @@ h2{
     font-weight: 700;
     font-style: normal;
 }
+
 .horariosAtencion table tr td{
     font-family: "Open Sans", sans-serif;
     font-style: normal;
+    background-color: #F2ECCE;
 }
 
 /*ACERCA DE NOSOTROS*/
@@ -206,8 +230,13 @@ h2{
     margin : 0rem 4rem 4rem 4rem;
 }
 .acercaDeNosotrosTexto{
+    display: flex;
     font-family: "Open Sans";
     text-align: justify;
+}
+.serviciosTexto{
+    display: grid;
+    grid-template-columns: 100%;
 }
 .serviciosOfrecemos{
     margin: 2rem;
@@ -238,11 +267,16 @@ h2{
     #imgSand{
         height: 30rem;
     }
+    /*RESPONSIVE MENÚ*/
+    .triplesMenu table tr{
+        font-size: 13px;
+    }
 
 
 }
 @media (max-width: 768px){
 
+    /*RESPONSIVE INICIO*/
     .cuerpoInicio{
         display: block;
     }
@@ -259,14 +293,85 @@ h2{
     #imgSand{
         height: 30rem;
     }
+    /*RESPONSIVE UBICACION*/
+    .contenidoMenuUbicacion{
+        display: block;
+    }
+    .ubicacionMapa{
+        display: grid;
+        grid-template-areas: 100%;
+        margin-right: 10%;
+        
+    }
+    .horariosAtencion{
+        display: grid;
+        grid-template-areas: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        
+    }
+    #mapaUbi{
+       height: 30rem;
+    }
+    /*RESEÑAS RESPONSIVE*/
+    .imagenTextoResenia{
+        display: none;
+    }
+    .imagenSobreH2{
+        display: block;
+        text-align: center;
+    }
+    .imagenSobreH2 img{
+        margin-bottom: 1rem;
+    }
+    .reseniasTexto{
+        text-align: center;
+    }
+    .reseniasFecha{
+       justify-content: center;
+    }
+
+    /*ACERCA DE NOSOTROS RESPONSIVE*/
+    .acercaDeNosotrosTexto{
+        font-size: 12px;
+    }
+    .serviciosTexto p{
+        font-size: 12px;
+    }
+    .serviciosTexto ol li{
+        font-size: 11px;
+    }
+    .serviciosTexto ol li p{
+        font-size: 11px;
+    }
 
 }
 @media (max-width: 425px){
+    /*RESPONSIVE FOOTER IMG*/
+    #imgWsp{
+        height: 30px;
+        width: 30px;
+    }
+    #imgIg{
+        height: 30px;
+        width: 30px;
+    }
+    #imgFb{
+        height: 30px;
+        width: 30px;
+    }
+    /*RESPONSIVE INICIO*/
     .hImagen{
         margin-bottom: 20%;
     }
     #imgSand{
         height: 20rem;
     }
+    /*RESPONSIVE UBICACION*/
+    #mapaUbi{
+        height: 15rem;
+    }
+ 
 }
 
